@@ -488,3 +488,153 @@ nav {
   margin-top: 16px;
   color: var(--text-quaternary);
 }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+    height: 56px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 18px;
+  }
+
+  .hero {
+    padding: 100px 20px 80px;
+  }
+
+  .hero-badge {
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  /* mobile h1 had hardcoded line breaks — let it flow naturally */
+  .hero h1 br {
+    display: none;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .examples {
+    padding: 24px 20px 60px;
+  }
+
+  .section-intro {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  /* horizontal scroll cards on mobile */
+  .cards-grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* bleed to screen edges for that native feel */
+    margin: 0 -20px;
+    padding: 4px 20px 16px;
+    /* hide scrollbar */
+    scrollbar-width: none;
+  }
+
+  .cards-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .insight-card {
+    padding: 24px;
+    flex: 0 0 85%;  /* each card takes 85% of viewport, hint of next card peeks */
+    scroll-snap-align: start;
+  }
+
+  .card-question {
+    font-size: 16px;
+  }
+
+  /* how it works */
+  .how-it-works {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 20px;
+  }
+
+  .hiw-content {
+    position: static; /* sticky breaks on stacked mobile */
+  }
+
+  .hiw-heading {
+    font-size: 32px;
+  }
+
+  .hiw-steps {
+    gap: 32px;
+  }
+
+  /* why now */
+  .why-now-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 64px 20px;
+  }
+
+  .why-now-left {
+    position: static;
+  }
+
+  .why-now-heading {
+    font-size: 28px;
+  }
+
+  .why-stat {
+    padding: 28px 0;
+  }
+
+  .why-stat-number {
+    font-size: 40px;
+  }
+
+  /* final cta */
+  .final-cta {
+    padding: 64px 20px;
+  }
+
+  .final-cta-heading {
+    font-size: 32px;
+  }
+}
+
+/* extra tight for small iphones (SE, mini) */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section-intro {
+    font-size: 22px;
+  }
+
+  .hiw-heading,
+  .final-cta-heading {
+    font-size: 28px;
+  }
+}

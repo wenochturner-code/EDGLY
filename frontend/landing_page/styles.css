@@ -457,6 +457,15 @@ nav {
   max-width: 380px;
 }
 
+.why-stat-source {
+  font-size: 11px;
+  font-style: italic;
+  color: var(--text-quaternary);
+  opacity: 0.65;
+  margin-top: 10px;
+  letter-spacing: 0.01em;
+}
+
 .final-cta {
   border-top: 1px solid var(--border-primary);
   padding: 120px 5%;
